@@ -10,6 +10,7 @@ try {
     $retour["message"] = "Connexion à la base de données impossible";
 }
 
+
 if (!empty($_POST["ville_depart"])) {
     $requete = $pdo->prepare("SELECT * FROM `vols` WHERE `ville_depart` LIKE :ville");
     $requete->bindParam(':ville', $_POST["ville_depart"]);
